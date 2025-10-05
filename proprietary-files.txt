@@ -1,0 +1,46 @@
+# All blobs from R11-user-9-PKQ1.190414.001-eng.root.20200522.190431-release-keys, unless pinned
+
+# ACDBs
+vendor/etc/acdbdata/16051/adsp_avs_config.acdb
+vendor/etc/acdbdata/16051/Bluetooth_cal.acdb
+vendor/etc/acdbdata/16051/General_cal.acdb
+vendor/etc/acdbdata/16051/Global_cal.acdb
+vendor/etc/acdbdata/16051/Handset_cal.acdb
+vendor/etc/acdbdata/16051/Hdmi_cal.acdb
+vendor/etc/acdbdata/16051/Headset_cal.acdb
+vendor/etc/acdbdata/16051/Speaker_cal.acdb
+vendor/etc/acdbdata/16103/Bluetooth_cal.acdb
+vendor/etc/acdbdata/16103/General_cal.acdb
+vendor/etc/acdbdata/16103/Global_cal.acdb
+vendor/etc/acdbdata/16103/Handset_cal.acdb
+vendor/etc/acdbdata/16103/Hdmi_cal.acdb
+vendor/etc/acdbdata/16103/Headset_cal.acdb
+vendor/etc/acdbdata/16103/Speaker_cal.acdb
+vendor/etc/acdbdata/16118/Bluetooth_cal.acdb
+vendor/etc/acdbdata/16118/General_cal.acdb
+vendor/etc/acdbdata/16118/Global_cal.acdb
+vendor/etc/acdbdata/16118/Handset_cal.acdb
+vendor/etc/acdbdata/16118/Hdmi_cal.acdb
+vendor/etc/acdbdata/16118/Headset_cal.acdb
+vendor/etc/acdbdata/16118/Speaker_cal.acdb
+
+# Display calibration
+vendor/etc/qdcm_calib_data_oppo16051samsung_s6e3fa3_1080p_cmd_mode_dsi_panel.xml
+vendor/etc/qdcm_calib_data_oppo16103jdi_r63452_1080p_cmd_mode_dsi_panel.xml
+vendor/etc/qdcm_calib_data_oppo16118samsung_s6e3fa3_1080p_cmd_mode_dsi_panel.xml
+
+# Firmware
+vendor/firmware/tp/16051/16051_FW_S3508_SYNAPTICS.img
+vendor/firmware/tp/16051/16051_Limit_data.img
+vendor/firmware/tp/16103/16103_FW_S3320_JDI.img
+vendor/firmware/tp/16103/16103_Limit_data.img
+vendor/firmware/tp/16118/16118_FW_S3508_SYNAPTICS.img
+vendor/firmware/tp/16118/16118_Limit_data.img
+
+# Gatekeeper
+vendor/lib/hw/gatekeeper.sdm660.so
+vendor/lib64/hw/gatekeeper.sdm660.so
+
+# Keystore
+vendor/lib/hw/keystore.sdm660.so
+vendor/lib64/hw/keystore.sdm660.so
