@@ -452,12 +452,6 @@
     <!--#endif /* VENDOR_EDIT */-->
 
     <!--#ifdef VENDOR_EDIT -->
-    <!--Zhiyong.Zheng@PSW.MM.AudioDriver.HAL, 2017/04/05, Add for ktv loopback-->
-    <ctl name="PRI_MI2S_RX_DL_HL Switch" value="0" />
-    <ctl name="PRI_MI2S_RX Port Mixer INT3_MI2S_TX_PRI" value="0" />
-    <!--#endif /* VENDOR_EDIT */-->
-
-    <!--#ifdef VENDOR_EDIT -->
     <!--Jianfeng.Qiu@PSW.MM.AudioDriver.HAL, 2017/02/22, Add for ak43xx default config-->
     <ctl name="AK4376 PDN Control" value="Off" />
     <ctl name="AK4376 BICK Output Frequency" value="2" />
@@ -1495,15 +1489,6 @@
         <path name="compress-offload-playback9 sec-mi2s" />
     </path>
 
-    <!--#ifdef VENDOR_EDIT -->
-    <!--Zhiyong.Zheng@PSW.MM.AudioDriver.HAL, 2017/04/05, Add for ktv loopback-->
-    <path name="audio-record ktv-afe">
-        <ctl name="MultiMedia1 Mixer INT3_MI2S_TX" value="1" />
-        <ctl name="PRI_MI2S_RX_DL_HL Switch" value="1" />
-        <ctl name="PRI_MI2S_RX Port Mixer INT3_MI2S_TX_PRI" value="1" />
-    </path>
-    <!--#endif -->
-
     <path name="audio-record">
         <ctl name="MultiMedia1 Mixer INT3_MI2S_TX" value="1" />
     </path>
@@ -2155,14 +2140,6 @@
         <path name="adc2" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
-
-    <!--#ifndef VENDOR_EDIT-->
-    <!--Zhiyong.Zheng@PSW.MM.AudioDriver.HAL, 2017/04/05, Add for ktv loopback-->
-    <path name="headset-mic-ktv">
-        <path name="adc2" />
-        <ctl name="ADC2 MUX" value="INP2" />
-    </path>
-    <!--#endif /* VENDOR_EDIT */-->
 
     <path name="headset-mic-liquid">
         <path name="adc2" />
