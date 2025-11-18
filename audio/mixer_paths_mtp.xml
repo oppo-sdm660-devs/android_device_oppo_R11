@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Copyright (c) 2015-2017, The Linux Foundation. All rights reserved.    -->
+<!-- Copyright (c) 2015-2019, The Linux Foundation. All rights reserved.    -->
 <!--                                                                        -->
 <!-- Redistribution and use in source and binary forms, with or without     -->
 <!-- modification, are permitted provided that the following conditions are -->
@@ -67,9 +67,6 @@
     <ctl name="MultiMedia1 Mixer SLIM_7_TX" value="0" />
     <ctl name="MultiMedia8 Mixer INT3_MI2S_TX" value="0" />
     <ctl name="MultiMedia8 Mixer SLIM_7_TX" value="0" />
-    <ctl name="MultiMedia16 Mixer SLIM_0_TX" value="0" />
-    <ctl name="MultiMedia16 Mixer SLIM_7_TX" value="0" />
-    <ctl name="MultiMedia16 Mixer USB_AUDIO_TX" value="0" />
     <ctl name="HDMI Mixer MultiMedia1" value="0" />
     <ctl name="HDMI Mixer MultiMedia2" value="0" />
     <ctl name="HDMI Mixer MultiMedia3" value="0" />
@@ -162,6 +159,7 @@
     <ctl name="I2S TX2 INP1" value="ZERO" />
     <ctl name="I2S TX2 INP2" value="ZERO" />
     <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia4" value="0" />
+    <ctl name="ADC1_INP1 Switch" value="0" />
     <ctl name="HDMI Mixer MultiMedia4" value="0" />
     <ctl name="INT4_MI2S_RX_VI_FB_MONO_CH_MUX" value="ZERO" />
     <ctl name="INT4_MI2S_RX_VI_FB_STEREO_CH_MUX" value="ZERO" />
@@ -176,8 +174,6 @@
     <!-- HFP end -->
     <!-- echo reference -->
     <ctl name="AUDIO_REF_EC_UL1 MUX" value="None" />
-    <ctl name="AUDIO_REF_EC_UL5 MUX" value="None" />
-    <ctl name="AUDIO_REF_EC_UL8 MUX" value="None" />
     <!-- usb headset -->
     <ctl name="AFE_PCM_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="AFE_PCM_RX Audio Mixer MultiMedia2" value="0" />
@@ -244,6 +240,10 @@
     <ctl name="RT_PROXY_1_TX SetCalMode" value="CAL_MODE_NONE" />
     <!-- RT Proxy Cal end -->
 
+    <!-- mixer control to disable lowlatency qos voting -->
+    <ctl name="MultiMedia5_RX QOS Vote" value="Disable" />
+    <!-- mixer control to disable lowlatency qos voting end -->
+
     <!-- Incall Recording -->
     <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="0" />
     <ctl name="MultiMedia1 Mixer VOC_REC_DL" value="0" />
@@ -280,8 +280,6 @@
     <!-- audio record compress end-->
 
     <!-- split a2dp -->
-    <ctl name="BT SampleRate" value="KHZ_8" />
-    <ctl name="AFE Input Channels" value="Zero" />
     <ctl name="SLIM7_RX ADM Channels" value="Zero" />
     <!-- split a2dp end-->
 
@@ -312,26 +310,16 @@
     <ctl name="HPHL Volume" value="9" />
     <ctl name="HPHR Volume" value="9" />
     <ctl name="EAR PA Gain" value="POS_1P5_DB" />
-    <ctl name="EAR PA Boost" value="DISABLE" />
+    <ctl name="EAR PA Boost" value="ENABLE" />
 
     <ctl name="RX1 Digital Volume" value="84" />
     <ctl name="RX2 Digital Volume" value="84" />
     <ctl name="RX3 Digital Volume" value="84" />
     <ctl name="RX4 Digital Volume" value="84" />
     <ctl name="RX5 Digital Volume" value="84" />
-    <!--
-    #ifndef VENDOR_EDIT
-    //John.Xu@PSW.MM.AudioDriver.HAL, 2016/02/27, Modify for avoid initial value not correct
     <ctl name="ADC1 Volume" value="4" />
     <ctl name="ADC2 Volume" value="4" />
     <ctl name="ADC3 Volume" value="4" />
-    #else /* VENDOR_EDIT */
-    -->
-    <ctl name="ADC1 Volume" value="5" />
-    <ctl name="ADC2 Volume" value="5" />
-    <ctl name="ADC3 Volume" value="5" />
-    <!--#endif /* VENDOR_EDIT */ -->
-    <ctl name="ADC1_INP1 Switch" value="0" />
     <ctl name="DEC1 Volume" value="84" />
     <ctl name="DEC2 Volume" value="84" />
     <ctl name="DEC3 Volume" value="84" />
@@ -350,7 +338,7 @@
     <ctl name="RDAC2 MUX" value="ZERO" />
 
     <!-- Interpolator chain controls -->
-    <!-- ADD RX Chain Controls -->
+	<!-- ADD RX Chain Controls --> 
 
     <ctl name="RX1 MIX1 INP1" value="ZERO" />
     <ctl name="RX2 MIX1 INP1" value="ZERO" />
@@ -403,93 +391,12 @@
     <ctl name="IIR1 INP4 Volume" value="53" />
     <ctl name="IIR1 INP1 MUX" value="ZERO" />
 
-    <!--#ifdef VENDOR_EDIT -->
-    <!--Jianfeng.Qiu@PSW.MM.AudioDriver.HAL, 2016/08/10, Add for custom config-->
-    <ctl name="EAR_S" value="ZERO" />
-    <ctl name="EAR PA Boost" value="DISABLE" />
-    <ctl name="Speaker Boost" value="DISABLE" />
-    <ctl name="Ext Spk Boost" value="DISABLE" />
-    <ctl name="Boost Option" value="BOOST_SWITCH" />
-    <ctl name="Regulator Mode Switch" value="MODE_NORMAL" />
-
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia7" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia8" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia10" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia11" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia12" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia13" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia14" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia15" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia16" value="0" />
-
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia5" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia4" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia7" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia8" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia10" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia11" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia12" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia13" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia14" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia15" value="0" />
-    <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia16" value="0" />
-
-    <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode1" value="0" />
-    <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode2" value="0" />
-    <ctl name="SEC_MI2S_RX_Voice Mixer VoiceMMode1" value="0" />
-    <ctl name="SEC_MI2S_RX_Voice Mixer VoiceMMode2" value="0" />
-
-    <ctl name="PRI_MI2S_RX_Voice Mixer Voip" value="0" />
-    <ctl name="SEC_MI2S_RX_Voice Mixer Voip" value="0" />
-
-    <ctl name="PRIM_MI2S_RX Format" value="S16_LE" />
-    <ctl name="SEC_MI2S_RX Format" value="S16_LE" />
-    <ctl name="PRIM_MI2S_RX Channels" value="One" />
-    <!--#endif /* VENDOR_EDIT */-->
-
-    <!--#ifdef VENDOR_EDIT -->
-    <!--Jianfeng.Qiu@PSW.MM.AudioDriver.HAL, 2017/02/22, Add for ak43xx default config-->
-    <ctl name="AK4376 PDN Control" value="Off" />
-    <ctl name="AK4376 BICK Output Frequency" value="2" />
-    <ctl name="AK4376 BICK Frequency Select" value="32fs" />
-    <ctl name="AK4376 HP-Amp Analog Volume" value="0" />
-    <ctl name="AK4376 HPL Mixer LDACL" value="0" />
-    <ctl name="AK4376 HPR Mixer RDACR" value="0" />
-    <ctl name="AK4376 Digital Output VolumeL" value="12" />
-    <ctl name="AK4376 Digital Output VolumeR" value="12" />
-    <ctl name="AK4376 Low Power Mode" value="High Performance" />
-    <!--#endif /* VENDOR_EDIT */-->
-
     <!-- anc related -->
 
     <!-- vbat related data -->
     <!-- vbat related data end -->
 
     <!-- Codec controls end -->
-
-    <!--Jianfeng.Qiu@PSW.MM.AudioDriver.HAL, 2017/02/22, Add for audio test-->
-    <path name="main-mic-test">
-        <ctl name="DEC1 MUX" value="ADC1" />
-        <ctl name="DEC1 Volume" value="100" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="ADC1 Volume" value="6" />
-        <ctl name="ADC1_INP1 Switch" value="1" />
-    </path>
-
-    <path name="sec-mic-test">
-        <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="ADC2 MUX" value="INP3" />
-        <ctl name="DEC1 Volume" value="100" />
-        <ctl name="ADC3 Volume" value="6" />
-    </path>
-
-    <path name="anc-mic-test">
-    </path>
-    <!--Jianfeng.Qiu@PSW.MM.AudioDriver.HAL, 2017/02/22, Add for audio test end-->
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="gsm-mode">
@@ -506,34 +413,18 @@
    </path>
 
     <path name="echo-reference">
-        <ctl name="AUDIO_REF_EC_UL1 MUX" value="INT0_MI2S_RX" />
+        <ctl name="AUDIO_REF_EC_UL1 MUX" value="INT4_MI2S_RX" />
     </path>
 
     <path name="echo-reference headphones">
-        <ctl name="AUDIO_REF_EC_UL1 MUX" value="PRI_MI2S_RX" />
+        <ctl name="AUDIO_REF_EC_UL1 MUX" value="INT0_MI2S_RX" />
     </path>
 
     <path name="echo-reference headphones-44.1">
     </path>
 
-    <path name="echo-reference speaker">
-        <ctl name="AUDIO_REF_EC_UL1 MUX" value="SEC_MI2S_TX" />
-    </path>
-
-    <path name="low-latency-echo-reference">
-        <ctl name="AUDIO_REF_EC_UL5 MUX" value="INT0_MI2S_RX" />
-    </path>
-
-    <path name="low-latency-echo-reference headphones">
-        <ctl name="AUDIO_REF_EC_UL5 MUX" value="PRI_MI2S_RX" />
-    </path>
-
-    <path name="low-latency-echo-reference speaker">
-        <ctl name="AUDIO_REF_EC_UL8 MUX" value="SEC_MI2S_TX" />
-    </path>
-
     <path name="deep-buffer-playback">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
     <path name="deep-buffer-playback speaker-protected">
@@ -563,7 +454,8 @@
     </path>
 
     <path name="deep-buffer-playback bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="deep-buffer-playback bt-sco" />
     </path>
 
@@ -585,40 +477,26 @@
     </path>
 
     <path name="deep-buffer-playback headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="1" />
-    </path>
-
-    <path name="deep-buffer-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
     <path name="deep-buffer-playback speaker-and-headphones">
         <path name="deep-buffer-playback headphones" />
-        <path name="deep-buffer-playback sec-mi2s" />
+        <path name="deep-buffer-playback" />
     </path>
 
     <path name="deep-buffer-playback speaker-and-bt-sco">
         <path name="deep-buffer-playback bt-sco" />
-        <path name="deep-buffer-playback sec-mi2s" />
+        <path name="deep-buffer-playback" />
     </path>
 
     <path name="deep-buffer-playback speaker-and-bt-sco-wb">
         <path name="deep-buffer-playback bt-sco-wb" />
-        <path name="deep-buffer-playback sec-mi2s" />
+        <path name="deep-buffer-playback" />
     </path>
 
     <path name="low-latency-playback">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia5" value="1" />
-    </path>
-
-    <path name="voicemmode1-call speaker-and-headphones">
-        <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
-        <ctl name="VoiceMMode1_Tx Mixer INT3_MI2S_TX_MMode1" value="1" />
-    </path>
-
-    <path name="voicemmode2-call speaker-and-headphones">
-        <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
-        <ctl name="VoiceMMode2_Tx Mixer INT3_MI2S_TX_MMode2" value="1" />
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
     <path name="low-latency-playback speaker-protected">
@@ -638,7 +516,8 @@
     </path>
 
     <path name="low-latency-playback bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="low-latency-playback bt-sco" />
     </path>
 
@@ -670,30 +549,31 @@
     </path>
 
     <path name="low-latency-playback headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia5" value="1" />
-    </path>
-
-    <path name="low-latency-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
     <path name="low-latency-playback speaker-and-headphones">
         <path name="low-latency-playback headphones" />
-        <path name="low-latency-playback sec-mi2s" />
+        <path name="low-latency-playback" />
     </path>
 
     <path name="low-latency-playback speaker-and-bt-sco">
         <path name="low-latency-playback bt-sco" />
-        <path name="low-latency-playback sec-mi2s" />
+        <path name="low-latency-playback" />
     </path>
 
     <path name="low-latency-playback speaker-and-bt-sco-wb">
         <path name="low-latency-playback bt-sco-wb" />
-        <path name="low-latency-playback sec-mi2s" />
+        <path name="low-latency-playback" />
+    </path>
+
+    <path name="low-latency-playback speaker">
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+        <path name="speaker-mono" />
     </path>
 
     <path name="audio-ull-playback">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia8" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia8" value="1" />
     </path>
 
     <path name="audio-ull-playback speaker-protected">
@@ -701,15 +581,11 @@
     </path>
 
     <path name="audio-ull-playback headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia8" value="1" />
-    </path>
-
-    <path name="audio-ull-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia8" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia8" value="1" />
     </path>
 
     <path name="audio-ull-playback speaker-and-headphones">
-        <path name="audio-ull-playback sec-mi2s" />
+        <path name="audio-ull-playback" />
         <path name="audio-ull-playback headphones" />
     </path>
 
@@ -726,7 +602,8 @@
     </path>
 
     <path name="audio-ull-playback bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="audio-ull-playback bt-sco" />
     </path>
 
@@ -754,12 +631,12 @@
 
     <path name="audio-ull-playback speaker-and-bt-sco">
         <path name="audio-ull-playback bt-sco" />
-        <path name="audio-ull-playback sec-mi2s" />
+        <path name="audio-ull-playback" />
     </path>
 
     <path name="audio-ull-playback speaker-and-bt-sco-wb">
         <path name="audio-ull-playback bt-sco-wb" />
-        <path name="audio-ull-playback sec-mi2s" />
+        <path name="audio-ull-playback" />
     </path>
 
     <path name="multi-channel-playback hdmi">
@@ -774,8 +651,12 @@
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia2" value="1" />
     </path>
 
+    <path name="low-latency-playback resume">
+        <ctl name="MultiMedia5_RX QOS Vote" value="Enable" />
+    </path>
+
     <path name="compress-offload-playback">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia4" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback speaker-protected">
@@ -803,7 +684,8 @@
     </path>
 
     <path name="compress-offload-playback bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback bt-sco" />
     </path>
 
@@ -835,37 +717,33 @@
     </path>
 
     <path name="compress-offload-playback headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia4" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia4" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
-    </path>
-
     <path name="compress-offload-playback speaker-and-headphones">
         <path name="compress-offload-playback headphones" />
-        <path name="compress-offload-playback sec-mi2s" />
+        <path name="compress-offload-playback" />
     </path>
 
     <path name="compress-offload-playback speaker-and-bt-sco">
         <path name="compress-offload-playback bt-sco" />
-        <path name="compress-offload-playback sec-mi2s" />
+        <path name="compress-offload-playback" />
     </path>
 
     <path name="compress-offload-playback speaker-and-bt-sco-wb">
         <path name="compress-offload-playback bt-sco-wb" />
-        <path name="compress-offload-playback sec-mi2s" />
+        <path name="compress-offload-playback" />
     </path>
 
     <path name="compress-offload-playback2">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia7" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia7" value="1" />
     </path>
 
     <path name="compress-offload-playback2 hdmi">
@@ -881,7 +759,8 @@
     </path>
 
     <path name="compress-offload-playback2 bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback2 bt-sco" />
     </path>
 
@@ -913,37 +792,33 @@
     </path>
 
     <path name="compress-offload-playback2 headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia7" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia7" value="1" />
     </path>
 
     <path name="compress-offload-playback2 headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia7" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia7" value="1" />
     </path>
 
     <path name="compress-offload-playback2 headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback2 sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia7" value="1" />
-    </path>
-
     <path name="compress-offload-playback2 speaker-and-headphones">
         <path name="compress-offload-playback2 headphones" />
-        <path name="compress-offload-playback2 sec-mi2s" />
+        <path name="compress-offload-playback2" />
     </path>
 
     <path name="compress-offload-playback2 speaker-and-bt-sco">
         <path name="compress-offload-playback2 bt-sco" />
-        <path name="compress-offload-playback2 sec-mi2s" />
+        <path name="compress-offload-playback2" />
     </path>
 
     <path name="compress-offload-playback2 speaker-and-bt-sco-wb">
         <path name="compress-offload-playback2 bt-sco-wb" />
-        <path name="compress-offload-playback2 sec-mi2s" />
+        <path name="compress-offload-playback2" />
     </path>
 
     <path name="compress-offload-playback3">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia10" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia10" value="1" />
     </path>
 
     <path name="compress-offload-playback3 hdmi">
@@ -959,7 +834,8 @@
     </path>
 
     <path name="compress-offload-playback3 bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback3 bt-sco" />
     </path>
 
@@ -991,37 +867,33 @@
     </path>
 
     <path name="compress-offload-playback3 headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia10" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia10" value="1" />
     </path>
 
     <path name="compress-offload-playback3 headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia10" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia10" value="1" />
     </path>
 
     <path name="compress-offload-playback3 headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback3 sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia10" value="1" />
-    </path>
-
     <path name="compress-offload-playback3 speaker-and-headphones">
         <path name="compress-offload-playback3 headphones" />
-        <path name="compress-offload-playback3 sec-mi2s" />
+        <path name="compress-offload-playback3" />
     </path>
 
     <path name="compress-offload-playback3 speaker-and-bt-sco">
         <path name="compress-offload-playback3 bt-sco" />
-        <path name="compress-offload-playback3 sec-mi2s" />
+        <path name="compress-offload-playback3" />
     </path>
 
     <path name="compress-offload-playback3 speaker-and-bt-sco-wb">
         <path name="compress-offload-playback3 bt-sco-wb" />
-        <path name="compress-offload-playback3 sec-mi2s" />
+        <path name="compress-offload-playback3" />
     </path>
 
     <path name="compress-offload-playback4">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia11" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
 
     <path name="compress-offload-playback4 hdmi">
@@ -1037,7 +909,8 @@
     </path>
 
     <path name="compress-offload-playback4 bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback4 bt-sco" />
     </path>
 
@@ -1070,37 +943,33 @@
     </path>
 
     <path name="compress-offload-playback4 headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia11" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
 
     <path name="compress-offload-playback4 headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia11" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
 
     <path name="compress-offload-playback4 headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback4 sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia11" value="1" />
-    </path>
-
     <path name="compress-offload-playback4 speaker-and-headphones">
         <path name="compress-offload-playback4 headphones" />
-        <path name="compress-offload-playback4 sec-mi2s" />
+        <path name="compress-offload-playback4" />
     </path>
 
     <path name="compress-offload-playback4 speaker-and-bt-sco">
         <path name="compress-offload-playback4 bt-sco" />
-        <path name="compress-offload-playback4 sec-mi2s" />
+        <path name="compress-offload-playback4" />
     </path>
 
     <path name="compress-offload-playback4 speaker-and-bt-sco-wb">
         <path name="compress-offload-playback4 bt-sco-wb" />
-        <path name="compress-offload-playback4 sec-mi2s" />
+        <path name="compress-offload-playback4" />
     </path>
 
     <path name="compress-offload-playback5">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia12" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia12" value="1" />
     </path>
 
     <path name="compress-offload-playback5 hdmi">
@@ -1116,7 +985,8 @@
     </path>
 
     <path name="compress-offload-playback5 bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback5 bt-sco" />
     </path>
 
@@ -1148,37 +1018,33 @@
     </path>
 
     <path name="compress-offload-playback5 headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia12" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia12" value="1" />
     </path>
 
     <path name="compress-offload-playback5 headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia12" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia12" value="1" />
     </path>
 
     <path name="compress-offload-playback5 headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback5 sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia12" value="1" />
-    </path>
-
     <path name="compress-offload-playback5 speaker-and-headphones">
         <path name="compress-offload-playback5 headphones" />
-        <path name="compress-offload-playback5 sec-mi2s" />
+        <path name="compress-offload-playback5" />
     </path>
 
     <path name="compress-offload-playback5 speaker-and-bt-sco">
         <path name="compress-offload-playback5 bt-sco" />
-        <path name="compress-offload-playback5 sec-mi2s" />
+        <path name="compress-offload-playback5" />
     </path>
 
     <path name="compress-offload-playback5 speaker-and-bt-sco-wb">
         <path name="compress-offload-playback5 bt-sco-wb" />
-        <path name="compress-offload-playback5 sec-mi2s" />
+        <path name="compress-offload-playback5" />
     </path>
 
     <path name="compress-offload-playback6">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia13" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia13" value="1" />
     </path>
 
     <path name="compress-offload-playback6 hdmi">
@@ -1194,7 +1060,8 @@
     </path>
 
     <path name="compress-offload-playback6 bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback6 bt-sco" />
     </path>
 
@@ -1226,37 +1093,33 @@
     </path>
 
     <path name="compress-offload-playback6 headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia13" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia13" value="1" />
     </path>
 
     <path name="compress-offload-playback6 headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia13" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia13" value="1" />
     </path>
 
     <path name="compress-offload-playback6 headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback6 sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia13" value="1" />
-    </path>
-
     <path name="compress-offload-playback6 speaker-and-headphones">
         <path name="compress-offload-playback6 headphones" />
-        <path name="compress-offload-playback6 sec-mi2s" />
+        <path name="compress-offload-playback6" />
     </path>
 
     <path name="compress-offload-playback6 speaker-and-bt-sco">
         <path name="compress-offload-playback6 bt-sco" />
-        <path name="compress-offload-playback6 sec-mi2s" />
+        <path name="compress-offload-playback6" />
     </path>
 
     <path name="compress-offload-playback6 speaker-and-bt-sco-wb">
         <path name="compress-offload-playback6 bt-sco-wb" />
-        <path name="compress-offload-playback6 sec-mi2s" />
+        <path name="compress-offload-playback6" />
     </path>
 
     <path name="compress-offload-playback7">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia14" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia14" value="1" />
     </path>
 
     <path name="compress-offload-playback7 hdmi">
@@ -1272,7 +1135,8 @@
     </path>
 
     <path name="compress-offload-playback7 bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback7 bt-sco" />
     </path>
 
@@ -1304,37 +1168,33 @@
     </path>
 
     <path name="compress-offload-playback7 headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia14" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia14" value="1" />
     </path>
 
     <path name="compress-offload-playback7 headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia14" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia14" value="1" />
     </path>
 
     <path name="compress-offload-playback7 headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback7 sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia14" value="1" />
-    </path>
-
     <path name="compress-offload-playback7 speaker-and-headphones">
         <path name="compress-offload-playback7 headphones" />
-        <path name="compress-offload-playback7 sec-mi2s" />
+        <path name="compress-offload-playback7" />
     </path>
 
     <path name="compress-offload-playback7 speaker-and-bt-sco">
         <path name="compress-offload-playback7 bt-sco" />
-        <path name="compress-offload-playback7 sec-mi2s" />
+        <path name="compress-offload-playback7" />
     </path>
 
     <path name="compress-offload-playback7 speaker-and-bt-sco-wb">
         <path name="compress-offload-playback7 bt-sco-wb" />
-        <path name="compress-offload-playback7 sec-mi2s" />
+        <path name="compress-offload-playback7" />
     </path>
 
     <path name="compress-offload-playback8">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia15" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia15" value="1" />
     </path>
 
     <path name="compress-offload-playback8 hdmi">
@@ -1350,7 +1210,8 @@
     </path>
 
     <path name="compress-offload-playback8 bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback8 bt-sco" />
     </path>
 
@@ -1382,37 +1243,33 @@
     </path>
 
     <path name="compress-offload-playback8 headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia15" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia15" value="1" />
     </path>
 
     <path name="compress-offload-playback8 headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia15" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia15" value="1" />
     </path>
 
     <path name="compress-offload-playback8 headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback8 sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia15" value="1" />
-    </path>
-
     <path name="compress-offload-playback8 speaker-and-headphones">
         <path name="compress-offload-playback8 headphones" />
-        <path name="compress-offload-playback8 sec-mi2s" />
+        <path name="compress-offload-playback8" />
     </path>
 
     <path name="compress-offload-playback8 speaker-and-bt-sco">
         <path name="compress-offload-playback8 bt-sco" />
-        <path name="compress-offload-playback8 sec-mi2s" />
+        <path name="compress-offload-playback8" />
     </path>
 
     <path name="compress-offload-playback8 speaker-and-bt-sco-wb">
         <path name="compress-offload-playback8 bt-sco-wb" />
-        <path name="compress-offload-playback8 sec-mi2s" />
+        <path name="compress-offload-playback8" />
     </path>
 
     <path name="compress-offload-playback9">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia16" value="1" />
+        <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
 
     <path name="compress-offload-playback9 hdmi">
@@ -1428,7 +1285,8 @@
     </path>
 
     <path name="compress-offload-playback9 bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-offload-playback9 bt-sco" />
     </path>
 
@@ -1460,33 +1318,29 @@
     </path>
 
     <path name="compress-offload-playback9 headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia16" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
 
     <path name="compress-offload-playback9 headphones-44.1">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia16" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
 
     <path name="compress-offload-playback9 headphones-dsd">
     </path>
 
-    <path name="compress-offload-playback9 sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia16" value="1" />
-    </path>
-
     <path name="compress-offload-playback9 speaker-and-headphones">
         <path name="compress-offload-playback9 headphones" />
-        <path name="compress-offload-playback9 sec-mi2s" />
+        <path name="compress-offload-playback9" />
     </path>
 
     <path name="compress-offload-playback9 speaker-and-bt-sco">
         <path name="compress-offload-playback9 bt-sco" />
-        <path name="compress-offload-playback9 sec-mi2s" />
+        <path name="compress-offload-playback9" />
     </path>
 
     <path name="compress-offload-playback9 speaker-and-bt-sco-wb">
         <path name="compress-offload-playback9 bt-sco-wb" />
-        <path name="compress-offload-playback9 sec-mi2s" />
+        <path name="compress-offload-playback9" />
     </path>
 
     <path name="audio-record">
@@ -1502,7 +1356,8 @@
     </path>
 
     <path name="audio-record bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="audio-record bt-sco" />
     </path>
 
@@ -1519,7 +1374,8 @@
     </path>
 
     <path name="audio-record-compress bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="audio-record-compress bt-sco" />
     </path>
 
@@ -1536,7 +1392,8 @@
     </path>
 
     <path name="low-latency-record bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="low-latency-record bt-sco" />
     </path>
 
@@ -1713,7 +1570,7 @@
     </path>
 
     <path name="compress-voip-call">
-        <ctl name="INT0_MI2S_RX_Voice Mixer Voip" value="1" />
+        <ctl name="INT4_MI2S_RX_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="1" />
     </path>
 
@@ -1723,15 +1580,10 @@
     </path>
 
     <path name="compress-voip-call headphones">
-        <ctl name="PRI_MI2S_RX_Voice Mixer Voip" value="1" />
+        <ctl name="INT0_MI2S_RX_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="1" />
     </path>
 
-    <path name="compress-voip-call sec-mi2s">
-        <ctl name="VOC_EXT_EC MUX" value="SEC_MI2S_TX" />
-        <ctl name="SEC_MI2S_RX_Voice Mixer Voip" value="1" />
-        <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="1" />
-    </path>
 
     <path name="compress-voip-call bt-sco">
         <ctl name="SLIM_7_RX_Voice Mixer Voip" value="1" />
@@ -1739,7 +1591,8 @@
     </path>
 
     <path name="compress-voip-call bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="compress-voip-call bt-sco" />
     </path>
 
@@ -1769,20 +1622,12 @@
     </path>
 
     <path name="voicemmode1-call">
-        <ctl name="VOC_EXT_EC MUX" value="NONE" />
-        <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
+        <ctl name="INT4_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer INT3_MI2S_TX_MMode1" value="1" />
     </path>
 
     <path name="voicemmode1-call headphones">
-        <ctl name="VOC_EXT_EC MUX" value="NONE" />
-        <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
-        <ctl name="VoiceMMode1_Tx Mixer INT3_MI2S_TX_MMode1" value="1" />
-    </path>
-
-    <path name="voicemmode1-call sec-mi2s">
-        <ctl name="VOC_EXT_EC MUX" value="SEC_MI2S_TX" />
-        <ctl name="SEC_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
+        <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer INT3_MI2S_TX_MMode1" value="1" />
     </path>
 
@@ -1797,7 +1642,8 @@
     </path>
 
     <path name="voicemmode1-call bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="voicemmode1-call bt-sco" />
     </path>
 
@@ -1827,20 +1673,12 @@
     </path>
 
     <path name="voicemmode2-call">
-        <ctl name="VOC_EXT_EC MUX" value="NONE" />
-        <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
+        <ctl name="INT4_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer INT3_MI2S_TX_MMode2" value="1" />
     </path>
 
     <path name="voicemmode2-call headphones">
-        <ctl name="VOC_EXT_EC MUX" value="NONE" />
-        <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
-        <ctl name="VoiceMMode2_Tx Mixer INT3_MI2S_TX_MMode2" value="1" />
-    </path>
-
-    <path name="voicemmode2-call sec-mi2s">
-        <ctl name="VOC_EXT_EC MUX" value="SEC_MI2S_TX" />
-        <ctl name="SEC_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
+        <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer INT3_MI2S_TX_MMode2" value="1" />
     </path>
 
@@ -1855,7 +1693,8 @@
     </path>
 
     <path name="voicemmode2-call bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
+        <ctl name="BT SampleRate RX" value="KHZ_16" />
+        <ctl name="BT SampleRate TX" value="KHZ_16" />
         <path name="voicemmode2-call bt-sco" />
     </path>
 
@@ -1927,7 +1766,6 @@
         <ctl name="DEC1 MUX" value="DMIC4" />
     </path>
 
-    <!--
     <path name="speaker">
         <ctl name="INT4_MI2S_RX Channels" value="Two" />
         <ctl name="RX4 MIX1 INP1" value="RX4" />
@@ -1945,14 +1783,10 @@
         <ctl name="SpkrLeft WSA PA Mute" value="0" />
         <ctl name="SpkrRight WSA PA Mute" value="0" />
     </path>
-    -->
-    <path name="speaker">
-        <ctl name="mono Profile" value="MUSIC_48000" />
-    </path>
 
     <path name="speaker-mono">
-        <ctl name="INT4_MI2S_RX Channels" value="One" />
-        <ctl name="RX4 MIX1 INP1" value="RX4" />
+        <ctl name="SEC_MI2S_RX Channels" value="One" />
+        <ctl name="RX2 MIX1 INP1" value="RX2" />
         <ctl name="COMP1 Switch" value="1" />
         <ctl name="SpkrLeft COMP Switch" value="1" />
         <ctl name="SpkrLeft BOOST Switch" value="1" />
@@ -2014,8 +1848,7 @@
     </path>
 
     <path name="speaker-mic">
-        <path name="adc1" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+        <path name="dmic2" />
     </path>
 
     <path name="speaker-mic-liquid">
@@ -2069,26 +1902,13 @@
         <path name="voice-speaker-2-protected" />
     </path>
 
-    <!--
     <path name="handset">
         <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
         <path name="speaker-mono" />
     </path>
-    -->
-    <path name="handset">
-        <ctl name="RX1 MIX1 INP1" value="RX1" />
-        <ctl name="RDAC2 MUX" value="RX1" />
-        <ctl name="RX1 Digital Volume" value="84" />
-        <ctl name="EAR PA Gain" value="POS_6_DB" />
-        <ctl name="EAR_S" value="Switch" />
-    </path>
 
     <path name="handset-mic">
-        <ctl name="ADC1 Volume" value="4" />
-        <ctl name="DEC1 MUX" value="ADC1" />
-        <ctl name="ADC1_INP1 Switch" value="1" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="INT3_MI2S_TX Channels" value="One" />
+        <path name="dmic3" />
     </path>
 
     <path name="handset-mic-db">
@@ -2113,16 +1933,15 @@
     </path>
 
     <path name="headphones">
-        <ctl name="PRIM_MI2S_RX Channels" value="Two" />
-        <ctl name="AK4376 PDN Control" value="On" />
-        <ctl name="AK4376 BICK Output Frequency" value="2" />
-        <ctl name="AK4376 BICK Frequency Select" value="48fs" />
-        <ctl name="AK4376 HP-Amp Analog Volume" value="11" />
-        <ctl name="AK4376 HPL Mixer LDACL" value="1" />
-        <ctl name="AK4376 HPR Mixer RDACR" value="1" />
-        <ctl name="AK4376 Digital Output VolumeL" value="18" />
-        <ctl name="AK4376 Digital Output VolumeR" value="18" />
-        <ctl name="PRIM_MI2S_RX Format" value="S24_LE" />
+        <ctl name="INT0_MI2S_RX Channels" value="Two" />
+        <ctl name="RX1 MIX1 INP1" value="RX1" />
+        <ctl name="RX2 MIX1 INP1" value="RX2" />
+        <ctl name="RDAC2 MUX" value="RX2" />
+        <ctl name="RX HPH Mode" value="HD2" />
+        <ctl name="COMP0 RX1" value="1" />
+        <ctl name="COMP0 RX2" value="1" />
+        <ctl name="HPHL" value="Switch" />
+        <ctl name="HPHR" value="Switch" />
     </path>
 
     <path name="headphones-44.1">
@@ -2138,7 +1957,6 @@
 
     <path name="headset-mic">
         <path name="adc2" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
     <path name="headset-mic-liquid">
@@ -2146,7 +1964,6 @@
     </path>
 
     <path name="voice-handset">
-        <ctl name="Regulator Mode Switch" value="MODE_FAST" />
         <path name="handset" />
     </path>
 
@@ -2155,7 +1972,7 @@
     </path>
 
     <path name="voice-speaker">
-        <ctl name="mono Profile" value="VOICE_48000" />
+        <path name="speaker-mono" />
     </path>
 
     <path name="voice-speaker-2">
@@ -2180,11 +1997,6 @@
 
     <path name="voice-headphones">
         <path name="headphones" />
-        <ctl name="AK4376 BICK Frequency Select" value="32fs" />
-        <ctl name="AK4376 Low Power Mode" value="Low Power" />
-        <ctl name="AK4376 Digital Output VolumeL" value="25" />
-        <ctl name="AK4376 Digital Output VolumeR" value="25" />
-        <ctl name="PRIM_MI2S_RX Format" value="S16_LE" />
     </path>
 
     <path name="voice-line">
@@ -2311,24 +2123,14 @@
 
     <!-- Dual MIC devices -->
     <path name="handset-dmic-endfire">
-        <ctl name="DEC1 MUX" value="ADC1" />
-        <ctl name="DEC2 MUX" value="ADC2" />
-        <ctl name="ADC2 MUX" value="INP3" />
-        <ctl name="ADC1_INP1 Switch" value="1" />
-        <ctl name="ADC1 Volume" value="6" />
-        <ctl name="ADC3 Volume" value="6" />
-        <ctl name="DEC1 Volume" value="80" />
-        <ctl name="DEC2 Volume" value="80" />
+        <ctl name="DEC1 MUX" value="DMIC3" />
+        <ctl name="DEC2 MUX" value="DMIC4" />
         <ctl name="INT3_MI2S_TX Channels" value="Two" />
     </path>
 
     <path name="speaker-dmic-endfire">
-        <ctl name="ADC1 Volume" value="6" />
-        <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="ADC3 Volume" value="6" />
-        <ctl name="DEC2 MUX" value="ADC1" />
-        <ctl name="ADC1_INP1 Switch" value="1" />
-        <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="DEC1 MUX" value="DMIC2" />
+        <ctl name="DEC2 MUX" value="DMIC4" />
         <ctl name="INT3_MI2S_TX Channels" value="Two" />
     </path>
 
@@ -2343,34 +2145,8 @@
     </path>
 
     <path name="handset-stereo-dmic-ef">
-        <ctl name="DEC1 MUX" value="ADC1" />
-        <ctl name="DEC2 MUX" value="ADC2" />
-        <ctl name="ADC2 MUX" value="INP3" />
-        <ctl name="ADC1_INP1 Switch" value="1" />
-        <ctl name="ADC1 Volume" value="4" />
-        <ctl name="ADC3 Volume" value="4" />
-        <ctl name="DEC1 Volume" value="80" />
-        <ctl name="DEC2 Volume" value="80" />
-        <ctl name="INT3_MI2S_TX Channels" value="Two" />
+        <path name="handset-dmic-endfire" />
     </path>
-
-<!--#ifdef VENDOR_EDIT-->
-<!--//John.Xu@PSW.MM.AudioDriver.HAL, 2016/10/14, Add for use two mic for Wechat -->
-    <path name="handset-stereo-dmic-ef-weixin">
-        <path name="handset-stereo-dmic-ef" />
-    </path>
-<!--#endif /* VENDOR_EDIT */-->
-
-<!--#ifdef VENDOR_EDIT-->
-<!--//Zhiyong.Zheng@PSW.MM.AudioDriver.HAL, 2017/06/21, Add voicescene -->
-    <path name="speaker-stereo-dmic-ef-tmgp">
-        <path name="speaker-dmic-endfire" />
-    </path>
-
-    <path name="speaker-stereo-dmic-ef-weixin">
-        <path name="speaker-dmic-endfire" />
-    </path>
-<!--#endif /* VENDOR_EDIT */-->
 
     <path name="speaker-stereo-dmic-ef">
         <path name="speaker-dmic-endfire" />
@@ -2428,7 +2204,7 @@
 
     <path name="dmic-broadside">
         <path name="speaker-dmic-broadside" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+        <ctl name="IIR1 INP1 MUX" value="DEC7" />
     </path>
 
     <path name="voice-speaker-dmic-broadside">
@@ -2496,7 +2272,7 @@
     </path>
 
     <path name="voice-tty-vco-handset-mic">
-        <path name="adc1" />
+        <path name="dmic1" />
     </path>
 
     <path name="unprocessed-handset-mic">
@@ -2513,8 +2289,6 @@
     </path>
 
     <path name="bt-a2dp">
-        <ctl name="BT SampleRate" value="KHZ_48" />
-        <ctl name="AFE Input Channels" value="Two" />
         <ctl name="SLIM7_RX ADM Channels" value="Two" />
     </path>
 
@@ -2573,121 +2347,62 @@
 
     <path name="deep-buffer-playback speaker-and-bt-a2dp">
         <path name="deep-buffer-playback bt-a2dp" />
-        <path name="deep-buffer-playback sec-mi2s" />
+        <path name="deep-buffer-playback" />
     </path>
 
     <path name="compress-offload-playback speaker-and-bt-a2dp">
         <path name="compress-offload-playback bt-a2dp" />
-        <path name="compress-offload-playback sec-mi2s" />
+        <path name="compress-offload-playback" />
     </path>
 
     <path name="low-latency-playback speaker-and-bt-a2dp">
         <path name="low-latency-playback bt-a2dp" />
-        <path name="low-latency-playback sec-mi2s" />
+        <path name="low-latency-playback" />
     </path>
 
     <path name="compress-offload-playback2 speaker-and-bt-a2dp">
         <path name="compress-offload-playback2 bt-a2dp" />
-        <path name="compress-offload-playback2 sec-mi2s" />
+        <path name="compress-offload-playback2" />
     </path>
 
     <path name="compress-offload-playback3 speaker-and-bt-a2dp">
         <path name="compress-offload-playback3 bt-a2dp" />
-        <path name="compress-offload-playback3 sec-mi2s" />
+        <path name="compress-offload-playback3" />
     </path>
 
     <path name="compress-offload-playback4 speaker-and-bt-a2dp">
         <path name="compress-offload-playback4 bt-a2dp" />
-        <path name="compress-offload-playback4 sec-mi2s" />
+        <path name="compress-offload-playback4" />
     </path>
 
     <path name="compress-offload-playback5 speaker-and-bt-a2dp">
         <path name="compress-offload-playback5 bt-a2dp" />
-        <path name="compress-offload-playback5 sec-mi2s" />
+        <path name="compress-offload-playback5" />
     </path>
 
     <path name="compress-offload-playback6 speaker-and-bt-a2dp">
         <path name="compress-offload-playback6 bt-a2dp" />
-        <path name="compress-offload-playback6 sec-mi2s" />
+        <path name="compress-offload-playback6" />
     </path>
 
     <path name="compress-offload-playback7 speaker-and-bt-a2dp">
         <path name="compress-offload-playback7 bt-a2dp" />
-        <path name="compress-offload-playback7 sec-mi2s" />
+        <path name="compress-offload-playback7" />
     </path>
 
     <path name="compress-offload-playback8 speaker-and-bt-a2dp">
         <path name="compress-offload-playback8 bt-a2dp" />
-        <path name="compress-offload-playback8 sec-mi2s" />
+        <path name="compress-offload-playback8" />
     </path>
 
     <path name="compress-offload-playback9 speaker-and-bt-a2dp">
         <path name="compress-offload-playback9 bt-a2dp" />
-        <path name="compress-offload-playback9 sec-mi2s" />
+        <path name="compress-offload-playback9" />
     </path>
 
     <path name="audio-ull-playback speaker-and-bt-a2dp">
         <path name="audio-ull-playback bt-a2dp" />
-        <path name="audio-ull-playback sec-mi2s" />
-    </path>
-
-    <path name="mmap-playback">
-        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia16" value="1" />
-    </path>
-
-    <path name="mmap-playback headphones">
-        <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia16" value="1" />
-    </path>
-
-    <path name="mmap-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia16" value="1" />
-    </path>
-
-    <path name="mmap-playback speaker-and-headphones">
-        <path name="mmap-playback headphones" />
-        <path name="mmap-playback sec-mi2s" />
-    </path>
-
-    <path name="mmap-playback bt-sco">
-        <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia16" value="1" />
-    </path>
-
-    <path name="mmap-playback bt-sco-wb">
-        <ctl name="BT SampleRate" value="16000" />
-        <path name="mmap-playback bt-sco" />
-    </path>
-
-    <path name="mmap-playback afe-proxy">
-        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia16" value="1" />
-    </path>
-
-    <path name="mmap-playback usb-headphones">
-        <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia16" value="1" />
-    </path>
-
-    <path name="mmap-playback usb-headset">
-        <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia16" value="1" />
-    </path>
-
-    <path name="mmap-record">
-      <ctl name="MultiMedia16 Mixer SLIM_0_TX" value="1" />
-    </path>
-
-    <path name="mmap-record bt-sco">
-      <ctl name="MultiMedia16 Mixer SLIM_7_TX" value="1" />
-    </path>
-
-    <path name="mmap-record bt-sco-wb">
-        <ctl name="AUX PCM SampleRate" value="16000" />
-        <path name="mmap-record bt-sco" />
-    </path>
-
-    <path name="mmap-record capture-fm">
-      <ctl name="MultiMedia16 Mixer TERT_MI2S_TX" value="1" />
-    </path>
-
-    <path name="mmap-record usb-headset-mic">
-       <ctl name="MultiMedia16 Mixer USB_AUDIO_TX" value="1" />
+        <path name="audio-ull-playback" />
     </path>
 
     <path name="hifi-playback display-port">
