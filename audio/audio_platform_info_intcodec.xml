@@ -31,8 +31,8 @@
     <interface_names>
         <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="SLIMBUS_0" codec_type="external"/>
         <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="SLIMBUS_0" codec_type="external"/>
-        <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="INT3_MI2S_TX" codec_type="internal"/>
-        <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="INT3_MI2S_TX" codec_type="internal"/>
+        <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="INT3_MI2S" codec_type="internal"/>
+        <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="INT3_MI2S" codec_type="internal"/>
     </interface_names>
     <pcm_ids>
         <usecase name="USECASE_AUDIO_PLAYBACK_LOW_LATENCY" type="out" id="13"/>
@@ -122,7 +122,7 @@
         <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" backend="headphones" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_HANDSET" interface="INT0_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER" interface="SEC_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_1" interface="SEC_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_1" interface="INT4_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_2" interface="INT4_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" interface="INT4_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_VBAT" interface="INT4_MI2S_RX"/>
