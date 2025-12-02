@@ -45,7 +45,7 @@
     <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
     <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="OFF" />
-    <ctl name="SEC_MI2S_RX Port Mixer INT3_MI2S_TX" value="0" />
+    <ctl name="INT4_MI2S_RX Port Mixer INT3_MI2S_TX" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia5" value="0" />
@@ -103,33 +103,33 @@
     <ctl name="Display Port RX Bit Format" value="S16_LE" />
     <ctl name="Display Port RX SampleRate" value="KHZ_48" />
     <ctl name="Display Port RX Channels" value="Two" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia1" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia2" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia2" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia2" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia3" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia3" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia3" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia4" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia5" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia7" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia7" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia7" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia8" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia8" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia8" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia10" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia10" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia10" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia11" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia11" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia11" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia12" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia12" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia12" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia13" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia13" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia13" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia14" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia14" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia14" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia15" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia15" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia15" value="0" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia16" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia16" value="0" />
     <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia16" value="0" />
     <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia2" value="0" />
@@ -156,22 +156,22 @@
     <ctl name="USB_AUDIO_TX SampleRate" value="KHZ_48" />
     <ctl name="USB_AUDIO_TX Channels" value="One" />
     <ctl name="MultiMedia6 Mixer INT3_MI2S_TX" value="0" />
-    <ctl name="SEC_MI2S_RX Channels" value="One" />
+    <ctl name="INT4_MI2S_RX Channels" value="One" />
     <ctl name="INT0_MI2S_RX Channels" value="One" />
     <ctl name="INT3_MI2S_TX Channels" value="One" />
     <ctl name="I2S TX2 INP1" value="ZERO" />
     <ctl name="I2S TX2 INP2" value="ZERO" />
-    <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="0" />
+    <ctl name="INT4_MI2S_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="HDMI Mixer MultiMedia4" value="0" />
-    <ctl name="SEC_MI2S_RX_VI_FB_MONO_CH_MUX" value="ZERO" />
-    <ctl name="SEC_MI2S_RX_VI_FB_STEREO_CH_MUX" value="ZERO" />
+    <ctl name="INT4_MI2S_RX_VI_FB_MONO_CH_MUX" value="ZERO" />
+    <ctl name="INT4_MI2S_RX_VI_FB_STEREO_CH_MUX" value="ZERO" />
     <ctl name="VI_FEED_TX Channels" value="One" />
     <ctl name="AIF1_VI_SDW Mixer SPKR_VI_1" value="0" />
     <ctl name="AIF1_VI_SDW Mixer SPKR_VI_2" value="0" />
     <ctl name="INT5 MI2S VI MONO" value="Left" />
     <!-- HFP start -->
     <ctl name="HFP_SLIM7_UL_HL Switch" value="0" />
-    <ctl name="SEC_MI2S_RX Port Mixer SLIM_7_TX" value="0" />
+    <ctl name="INT4_MI2S_RX Port Mixer SLIM_7_TX" value="0" />
     <ctl name="INT0_MI2S_RX Port Mixer SLIM_7_TX" value="0" />
     <!-- HFP end -->
     <!-- echo reference -->
@@ -195,8 +195,8 @@
     <!-- usb headset end -->
     <!-- fm -->
     <ctl name="SLIMBUS_8 LOOPBACK Volume" value="0" />
-    <ctl name="SEC_MI2S_RX Port Mixer SLIM_8_TX" value="0" />
-    <ctl name="SEC_MI2S_RX_DL_HL Switch" value="0" />
+    <ctl name="INT4_MI2S_RX Port Mixer SLIM_8_TX" value="0" />
+    <ctl name="INT4_MI2S_RX_DL_HL Switch" value="0" />
     <ctl name="INT0_MI2S_RX Port Mixer SLIM_8_TX" value="0" />
     <ctl name="INT0_MI2S_RX_DL_HL Switch" value="0" />
     <ctl name="MultiMedia1 Mixer SLIM_8_TX" value="0" />
@@ -204,7 +204,7 @@
     <!-- fm end -->
 
     <!-- Multimode Voice1 -->
-    <ctl name="SEC_MI2S_RX_Voice Mixer VoiceMMode1" value="0" />
+    <ctl name="INT4_MI2S_RX_Voice Mixer VoiceMMode1" value="0" />
     <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode1" value="0" />
     <ctl name="VoiceMMode1_Tx Mixer INT3_MI2S_TX_MMode1" value="0" />
     <!-- Multimode Voice1 HDMI -->
@@ -220,7 +220,7 @@
     <!-- Miltimode Voice1 end-->
 
     <!-- Multimode Voice2 -->
-    <ctl name="SEC_MI2S_RX_Voice Mixer VoiceMMode2" value="0" />
+    <ctl name="INT4_MI2S_RX_Voice Mixer VoiceMMode2" value="0" />
     <ctl name="INT0_MI2S_RX_Voice Mixer VoiceMMode2" value="0" />
     <ctl name="VoiceMMode2_Tx Mixer INT3_MI2S_TX_MMode2" value="0" />
     <!-- Multimode Voice2 HDMI -->
@@ -256,7 +256,7 @@
     <!-- Incall Music End -->
 
     <!-- compress-voip-call start -->
-    <ctl name="SEC_MI2S_RX_Voice Mixer Voip" value="0" />
+    <ctl name="INT4_MI2S_RX_Voice Mixer Voip" value="0" />
     <ctl name="INT0_MI2S_RX_Voice Mixer Voip" value="0" />
     <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="0" />
     <ctl name="SLIM_7_RX_Voice Mixer Voip" value="0" />
@@ -286,7 +286,7 @@
     <!-- split a2dp end-->
 
     <!-- ADSP testfwk -->
-    <ctl name="SEC_MI2S_RX_DL_HL Switch" value="0" />
+    <ctl name="INT4_MI2S_RX_DL_HL Switch" value="0" />
     <ctl name="INT0_MI2S_RX_DL_HL Switch" value="0" />
     <!-- ADSP testfwk end-->
 
@@ -323,6 +323,7 @@
     #ifndef VENDOR_EDIT
     //John.Xu@PSW.MM.AudioDriver.HAL, 2016/02/27, Modify for avoid initial value not correct
     <ctl name="ADC1 Volume" value="4" />
+    
     <ctl name="ADC2 Volume" value="4" />
     <ctl name="ADC3 Volume" value="4" />
     #else /* VENDOR_EDIT */
@@ -539,15 +540,11 @@
     </path>
 
     <path name="deep-buffer-playback">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
-    </path>
-
-    <path name="deep-buffer-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
     <path name="deep-buffer-playback speaker-protected">
-        <path name="deep-buffer-playback sec-mi2s" />
+        <path name="deep-buffer-playback" />
     </path>
 
     <path name="deep-buffer-playback hdmi">
@@ -598,6 +595,10 @@
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
+    <path name="deep-buffer-playback sec-mi2s">
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+    </path>
+
     <path name="deep-buffer-playback speaker-and-headphones">
         <path name="deep-buffer-playback headphones" />
         <path name="deep-buffer-playback sec-mi2s" />
@@ -614,11 +615,7 @@
     </path>
 
     <path name="low-latency-playback">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
-    </path>
-
-    <path name="low-latency-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
     <path name="voicemmode1-call speaker-and-headphones">
@@ -632,7 +629,7 @@
     </path>
 
     <path name="low-latency-playback speaker-protected">
-        <path name="low-latency-playback sec-mi2s" />
+        <path name="low-latency-playback" />
     </path>
 
     <path name="low-latency-playback hdmi">
@@ -683,6 +680,10 @@
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
+    <path name="low-latency-playback sec-mi2s">
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+    </path>
+
     <path name="low-latency-playback speaker-and-headphones">
         <path name="low-latency-playback headphones" />
         <path name="low-latency-playback sec-mi2s" />
@@ -699,19 +700,19 @@
     </path>
 
     <path name="audio-ull-playback">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia8" value="1" />
-    </path>
-
-    <path name="audio-ull-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia8" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia8" value="1" />
     </path>
 
     <path name="audio-ull-playback speaker-protected">
-        <path name="audio-ull-playback sec-mi2s" />
+        <path name="audio-ull-playback" />
     </path>
 
     <path name="audio-ull-playback headphones">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia8" value="1" />
+    </path>
+
+    <path name="audio-ull-playback sec-mi2s">
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia8" value="1" />
     </path>
 
     <path name="audio-ull-playback speaker-and-headphones">
@@ -781,15 +782,11 @@
     </path>
 
     <path name="compress-offload-playback">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
-    </path>
-
-    <path name="compress-offload-playback sec-mi2s">
-        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
+        <ctl name="INT0_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback speaker-protected">
-        <path name="compress-offload-playback sec-mi2s" />
+        <path name="compress-offload-playback" />
     </path>
 
     <path name="compress-offload-playback hdmi">
@@ -853,6 +850,10 @@
     </path>
 
     <path name="compress-offload-playback headphones-dsd">
+    </path>
+
+    <path name="compress-offload-playback sec-mi2s">
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="compress-offload-playback speaker-and-headphones">
@@ -1569,8 +1570,8 @@
 
     <path name="play-fm">
         <ctl name="SLIMBUS_8 LOOPBACK Volume" value="1" />
-        <ctl name="SEC_MI2S_RX Port Mixer SLIM_8_TX" value="1" />
-        <ctl name="SEC_MI2S_RX_DL_HL Switch" value="1" />
+        <ctl name="INT4_MI2S_RX Port Mixer SLIM_8_TX" value="1" />
+        <ctl name="INT4_MI2S_RX_DL_HL Switch" value="1" />
     </path>
 
     <path name="play-fm headphones">
@@ -1703,10 +1704,10 @@
 
     <path name="hfp-sco">
         <ctl name="HFP_SLIM7_UL_HL Switch" value="1" />
-        <ctl name="SEC_MI2S_RX Port Mixer SLIM_7_TX" value="1" />
+        <ctl name="INT4_MI2S_RX Port Mixer SLIM_7_TX" value="1" />
         <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia6" value="1" />
         <ctl name="MultiMedia6 Mixer INT3_MI2S_TX" value="1" />
-        <ctl name="SEC_MI2S_RX_DL_HL Switch" value="1" />
+        <ctl name="INT4_MI2S_RX_DL_HL Switch" value="1" />
    </path>
 
     <path name="hfp-sco headphones">
@@ -1900,7 +1901,7 @@
     </path>
 
    <path name="spkr-rx-calib">
-        <ctl name="SEC_MI2S_RX_DL_HL Switch"  value="1" />
+        <ctl name="INT4_MI2S_RX_DL_HL Switch"  value="1" />
     </path>
 
     <path name="spkr-vi-record">
@@ -1944,7 +1945,7 @@
 
     <!--
     <path name="speaker">
-        <ctl name="SEC_MI2S_RX Channels" value="Two" />
+        <ctl name="INT4_MI2S_RX Channels" value="Two" />
         <ctl name="RX4 MIX1 INP1" value="RX4" />
         <ctl name="RX5 MIX1 INP1" value="RX5" />
         <ctl name="COMP1 Switch" value="1" />
@@ -1963,11 +1964,10 @@
     -->
     <path name="speaker">
         <ctl name="mono Profile" value="MUSIC_48000" />
-        <ctl name="mono MUSIC_48000 Playback Volume" value="255" />
     </path>
 
     <path name="speaker-mono">
-        <ctl name="SEC_MI2S_RX Channels" value="One" />
+        <ctl name="INT4_MI2S_RX Channels" value="One" />
         <ctl name="RX4 MIX1 INP1" value="RX4" />
         <ctl name="COMP1 Switch" value="1" />
         <ctl name="SpkrLeft COMP Switch" value="1" />
@@ -1978,7 +1978,7 @@
     </path>
 
     <path name="speaker-mono-2">
-        <ctl name="SEC_MI2S_RX Channels" value="One" />
+        <ctl name="INT4_MI2S_RX Channels" value="One" />
         <ctl name="RX5 MIX1 INP1" value="RX4" />
         <ctl name="COMP2 Switch" value="1" />
         <ctl name="SpkrRight COMP Switch" value="1" />
@@ -2046,21 +2046,21 @@
         <ctl name="AIF1_VI_SDW Mixer SPKR_VI_2" value="1" />
         <path name="speaker" />
         <ctl name="VI_FEED_TX Channels" value="Two" />
-        <ctl name="SEC_MI2S_RX_VI_FB_STEREO_CH_MUX" value="INT5_MI2S_TX" />
+        <ctl name="INT4_MI2S_RX_VI_FB_STEREO_CH_MUX" value="INT5_MI2S_TX" />
     </path>
 
     <path name="voice-speaker-protected">
         <ctl name="AIF1_VI_SDW Mixer SPKR_VI_1" value="1" />
         <path name="speaker-mono" />
         <ctl name="VI_FEED_TX Channels" value="One" />
-        <ctl name="SEC_MI2S_RX_VI_FB_MONO_CH_MUX" value="INT5_MI2S_TX" />
+        <ctl name="INT4_MI2S_RX_VI_FB_MONO_CH_MUX" value="INT5_MI2S_TX" />
     </path>
 
     <path name="voice-speaker-2-protected">
         <ctl name="AIF1_VI_SDW Mixer SPKR_VI_2" value="1" />
         <path name="speaker-mono-2" />
         <ctl name="VI_FEED_TX Channels" value="One" />
-        <ctl name="SEC_MI2S_RX_VI_FB_MONO_CH_MUX" value="INT5_MI2S_TX" />
+        <ctl name="INT4_MI2S_RX_VI_FB_MONO_CH_MUX" value="INT5_MI2S_TX" />
         <ctl name="INT5 MI2S VI MONO" value="Right" />
     </path>
 
@@ -2180,7 +2180,6 @@
 
     <path name="voice-speaker">
         <ctl name="mono Profile" value="VOICE_48000" />
-        <ctl name="mono VOICE_48000 Playback Volume" value="255" />
     </path>
 
     <path name="voice-speaker-2">
@@ -2534,7 +2533,7 @@
 
     <!-- Added for ADSP testfwk -->
     <path name="ADSP testfwk">
-        <ctl name="SEC_MI2S_RX_DL_HL Switch" value="1" />
+        <ctl name="INT4_MI2S_RX_DL_HL Switch" value="1" />
     </path>
 
     <path name="bt-a2dp">
