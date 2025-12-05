@@ -2321,6 +2321,15 @@ vendor/etc/qdcm_calib_data_oppo16051samsung_s6e3fa3_1080p_cmd_mode_dsi_panel.xml
 vendor/etc/qdcm_calib_data_oppo16103jdi_r63452_1080p_cmd_mode_dsi_panel.xml
 vendor/etc/qdcm_calib_data_oppo16118samsung_s6e3fa3_1080p_cmd_mode_dsi_panel.xml
 
+# Fingerprint
+vendor/etc/permissions/qti_fingerprint_interface.xml
+vendor/bin/qfp-daemon
+vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
+vendor/lib64/libqfp-service.so
+vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/android.frameworks.fingerprintservice@1.0.so
+
 # Firmware
 vendor/firmware/tp/16051/16051_FW_S3508_SYNAPTICS.img
 vendor/firmware/tp/16051/16051_Limit_data.img
@@ -2328,6 +2337,24 @@ vendor/firmware/tp/16103/16103_FW_S3320_JDI.img
 vendor/firmware/tp/16103/16103_Limit_data.img
 vendor/firmware/tp/16118/16118_FW_S3508_SYNAPTICS.img
 vendor/firmware/tp/16118/16118_Limit_data.img
+vendor/firmware/a_fp.b00
+vendor/firmware/a_fp.b01
+vendor/firmware/a_fp.b02
+vendor/firmware/a_fp.b03
+vendor/firmware/a_fp.b04
+vendor/firmware/a_fp.b05
+vendor/firmware/a_fp.b06
+vendor/firmware/a_fp.b07
+vendor/firmware/a_fp.mdt
+vendor/firmware/b_fp.b00
+vendor/firmware/b_fp.b01
+vendor/firmware/b_fp.b02
+vendor/firmware/b_fp.b03
+vendor/firmware/b_fp.b04
+vendor/firmware/b_fp.b05
+vendor/firmware/b_fp.b06
+vendor/firmware/b_fp.b07
+vendor/firmware/b_fp.mdt
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.sdm660.so
