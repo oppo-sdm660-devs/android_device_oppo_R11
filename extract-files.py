@@ -26,6 +26,8 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/bin/qfp-daemon': blob_fixup()
+        .replace_needed('libhidltransport.so', 'libhidlbase.so'),
     (
         'vendor/lib64/android.frameworks.fingerprintservice@1.0.so',
         'vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so',
