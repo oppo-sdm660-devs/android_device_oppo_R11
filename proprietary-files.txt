@@ -2182,15 +2182,15 @@ vendor/lib/libmmcamera_sunny_q13v06k_eeprom.so
 vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so
 
 # Camera config
-etc/camera/faceTpl0.rgb32:vendor/etc/camera/faceTpl0.rgb32
-etc/camera/faceTpl1.rgb32:vendor/etc/camera/faceTpl1.rgb32
-etc/camera/gasryuv.model:vendor/etc/camera/gasryuv.model
-etc/camera/skinSeg.model:vendor/etc/camera/skinSeg.model
-etc/camera/cp/CPCalibrationData.bin:vendor/etc/camera/cp/CPCalibrationData.bin
-etc/camera/cp/FusionCalibrationParams.bin:vendor/etc/camera/cp/FusionCalibrationParams.bin
-etc/camera/cp/SystemParamsBokeh.bin:vendor/etc/camera/cp/SystemParamsBokeh.bin
-etc/camera/cp/SystemParamsFusion.bin:vendor/etc/camera/cp/SystemParamsFusion.bin
-etc/camera/ashdr/ncf_pack.ncf:vendor/etc/camera/ashdr/ncf_pack.ncf
+system/etc/camera/faceTpl0.rgb32:vendor/etc/camera/faceTpl0.rgb32
+system/etc/camera/faceTpl1.rgb32:vendor/etc/camera/faceTpl1.rgb32
+system/etc/camera/gasryuv.model:vendor/etc/camera/gasryuv.model
+system/etc/camera/skinSeg.model:vendor/etc/camera/skinSeg.model
+system/etc/camera/cp/CPCalibrationData.bin:vendor/etc/camera/cp/CPCalibrationData.bin
+system/etc/camera/cp/FusionCalibrationParams.bin:vendor/etc/camera/cp/FusionCalibrationParams.bin
+system/etc/camera/cp/SystemParamsBokeh.bin:vendor/etc/camera/cp/SystemParamsBokeh.bin
+system/etc/camera/cp/SystemParamsFusion.bin:vendor/etc/camera/cp/SystemParamsFusion.bin
+system/etc/camera/ashdr/ncf_pack.ncf:vendor/etc/camera/ashdr/ncf_pack.ncf
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/csidtg_camera.xml
 vendor/etc/camera/csidtg_chromatix.xml
