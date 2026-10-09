@@ -26,6 +26,14 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib/libarcsoft_relighting_pro_image.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    # Front-beauty lite fallback core (R11 only), gnustl like the other cores.
+    'vendor/lib/libarcsoft_beautyshot_lite_image.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    # Stock 3A uses the HIDL transport symbols now provided by libhidlbase.
+    'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
+        .remove_needed('libhidltransport.so'),
     'vendor/bin/qfp-daemon': blob_fixup()
         .replace_needed('libhidltransport.so', 'libhidlbase.so'),
     (
