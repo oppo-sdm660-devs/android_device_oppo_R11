@@ -26,6 +26,9 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    # Stock 3A uses the HIDL transport symbols now provided by libhidlbase.
+    'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
+        .remove_needed('libhidltransport.so'),
     'vendor/bin/qfp-daemon': blob_fixup()
         .replace_needed('libhidltransport.so', 'libhidlbase.so'),
     (

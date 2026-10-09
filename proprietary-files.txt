@@ -24,6 +24,11 @@ vendor/etc/acdbdata/16118/Hdmi_cal.acdb
 vendor/etc/acdbdata/16118/Headset_cal.acdb
 vendor/etc/acdbdata/16118/Speaker_cal.acdb
 
+# Camera - device-specific 3A and its MCT loader, from R11 C.19 stock
+vendor/lib/libmmcamera2_mct_shimlayer.so
+vendor/lib/libmmcamera2_q3a_core.so
+vendor/lib/libmmcamera2_stats_modules.so
+
 # Camera Actuators
 vendor/lib/libactuator_ad5816g.so
 vendor/lib/libactuator_ad5823.so
