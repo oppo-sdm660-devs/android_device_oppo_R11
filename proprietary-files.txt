@@ -2195,7 +2195,6 @@ system/etc/camera/cp/CPCalibrationData.bin:vendor/etc/camera/cp/CPCalibrationDat
 system/etc/camera/cp/FusionCalibrationParams.bin:vendor/etc/camera/cp/FusionCalibrationParams.bin
 system/etc/camera/cp/SystemParamsBokeh.bin:vendor/etc/camera/cp/SystemParamsBokeh.bin
 system/etc/camera/cp/SystemParamsFusion.bin:vendor/etc/camera/cp/SystemParamsFusion.bin
-system/etc/camera/ashdr/ncf_pack.ncf:vendor/etc/camera/ashdr/ncf_pack.ncf
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/csidtg_camera.xml
 vendor/etc/camera/csidtg_chromatix.xml
