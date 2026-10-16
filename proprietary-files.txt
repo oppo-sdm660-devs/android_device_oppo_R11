@@ -2338,3 +2338,7 @@ vendor/lib64/hw/keystore.sdm660.so
 
 # HAL3 native rear beauty - use the matching C.19 implementation
 vendor/lib/libarcsoft_relighting_pro_image.so
+
+# HAL3 front-beauty lite fallback core - R11-only artifact
+# (camera/docs/HAL3_PORT_PLATFORM.md 4); see camera/docs/BLOB_PACKAGING.md
+vendor/lib/libarcsoft_beautyshot_lite_image.so
